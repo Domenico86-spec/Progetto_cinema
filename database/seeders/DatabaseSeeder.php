@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Movie;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +14,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $movies = [
+            ['name' => 'Tron:Ares', 'image' => ''],
+            ['name' => 'Mission Impossible:The Final reckoning', 'image' => ''],
+            ['name' => 'Jurassic World: La rinascita', 'image' => ''],
+            ['name' => 'Avengers:Doomsday', 'image' => ''],
+            ['name' => 'The F1', 'image' => ''],
+            ['name' => 'Superman', 'image' => ''],
+            
+        ];
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        foreach ($movies as $movie) {
+            Movie::create([
+                'name' => $movie['name'],
+                'image' => $movie['image'],
+                'year' => $movie['year'],
+                'genre' => $movie['genre'],
+            ]);
+        }
+       
     }
 }

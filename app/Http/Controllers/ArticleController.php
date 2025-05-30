@@ -12,7 +12,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $movies = Article::all();
+        return view('welcome', compact('movies'));
     }
 
     /**
@@ -20,7 +21,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('article.create');
+        
     }
 
     /**

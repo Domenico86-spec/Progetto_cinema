@@ -6,10 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
+
+    
+    
     protected $fillable = [
         'title',
         'description',
         'image',
+        'movie_id'
         
     ];
 }

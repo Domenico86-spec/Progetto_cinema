@@ -15,12 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $movies = [
-            ['name' => 'Tron:Ares', 'image' => '/media/tron-ares.jpg'],
-            ['name' => 'Mission Impossible:The Final reckoning', 'image' => '/media/mission impossible the final reckoning.jpg'],
-            ['name' => 'Jurassic World: La rinascita', 'image' => '/media/jurassicworld.jpg'],
-            ['name' => 'Avengers:Doomsday', 'image' => '/media/Avengersdoomsday.jpg'],
-            ['name' => 'The F1', 'image' => '/media/F1-the movie.jpg'],
-            ['name' => 'Superman', 'image' => '/media/Superman-2025.jpg'],
+            ['name' => 'Tron:Ares', 'image' => '/images/tron-ares.jpg'],
+            ['name' => 'Mission Impossible:The Final reckoning', 'image' => '/images/mission impossible the final reckoning.jpg'],
+            ['name' => 'Jurassic World: La rinascita', 'image' => '/images/jurassicworld.jpg'],
+            ['name' => 'Avengers:Doomsday', 'image' => '/images/Avengersdoomsday.jpg'],
+            ['name' => 'The F1', 'image' => '/images/F1-the movie.jpg'],
+            ['name' => 'Superman', 'image' => '/images/Superman-2025.jpg'],
             
         ];
 

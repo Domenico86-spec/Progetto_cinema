@@ -2,13 +2,11 @@ Cinema
 
 Homepage
     -movie photos
-    -User: form Registration,login, forum
+    -User: form -> Registration,login, forum
 
 -Movie
     -name 
     -image
-    -year
-    -genre
     
 
 -Article

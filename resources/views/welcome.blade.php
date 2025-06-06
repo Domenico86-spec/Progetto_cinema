@@ -20,7 +20,12 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">{{$movie->name}}</h5>
+                                <h5 class="card-title">Nome Film:{{$movie->name}}</h5>
+                                <h5 class="card-title">{{$movie->genre}}</h5>
+                                <h5 class="card-title">{{$movie->cast}}</h5>
+                                <h5 class="card-title">{{$movie->year}}</h5>
+                                
+                                
                                 
                             </div>
                         </div>

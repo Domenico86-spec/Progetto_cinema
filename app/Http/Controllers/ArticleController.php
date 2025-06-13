@@ -22,7 +22,8 @@ class ArticleController extends Controller
     public function create()
     {
         
-        return view('create'); 
+        $movies = Movie::all();
+        return view('create', compact('movies')); 
     }
 
     /**

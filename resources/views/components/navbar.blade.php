@@ -22,7 +22,7 @@
         @endguest
         @auth
         <li class="nav-item">
-          <a class="nav-link" href="{{route('create')}}">Movies</a>
+          <a class="nav-link" href="{{route('create')}}">Films</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,9 +32,9 @@
 
             <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a></li>
             <form method="POST" action="{{route('logout')}}"  id="logout">@csrf</form>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="{{route('create')}}">Inserisci un articolo</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            
           </ul>
         </li>
         @endauth

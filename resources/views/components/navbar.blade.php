@@ -22,7 +22,7 @@
         @endguest
         @auth
         <li class="nav-item">
-          <a class="nav-link" href="{{route('create')}}">Films</a>
+          <a class="nav-link" href="{{route('article.create')}}">Films</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,7 +32,6 @@
 
             <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a></li>
             <form method="POST" action="{{route('logout')}}"  id="logout">@csrf</form>
-            <li><a class="dropdown-item" href="{{route('create')}}">Inserisci un articolo</a></li>
             <li><hr class="dropdown-divider"></li>
             
           </ul>

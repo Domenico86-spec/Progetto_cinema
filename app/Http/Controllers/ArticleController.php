@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -23,15 +24,24 @@ class ArticleController extends Controller
     {
         
         $movies = Movie::all();
-        return view('create', compact('movies')); 
+        return view('article.create', compact('movies')); 
     }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        
+      
+        $movie = Auth::user()->movies->create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $request->file('image')->store('articles', 'public'),
+            'movie_id' => $request->movie
+        ]);
+
+        dd($movie);
        
     }
 
@@ -42,6 +52,8 @@ class ArticleController extends Controller
     {
         //
     }
+
+
 
     /**
      * Show the form for editing the specified resource.

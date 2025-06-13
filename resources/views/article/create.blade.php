@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-12 text-center">
-                <h1>Movies</h1>
+                <h1>Films</h1>
             </div>
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{{ route('create')}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Titolo</label>
@@ -16,7 +16,7 @@
                             
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Immagine</label>
-                                <input type="file" class="form-control" id="exampleInputPassword1" name="password">
+                                <input type="file" class="form-control" id="exampleInputPassword1" name="image">
                             </div>
                             <div class="mb-3">
                                 <label for="body" class="form-label">Descrizione </label>
@@ -24,7 +24,7 @@
                             </div>
                              <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Movie</label>
-                                <select name="movie" id="movie" class="form-control">
+                                <select name="movie" id="m" class="form-control">
                                     @foreach ($movies as $movie)
                                     <option value="{{$movie->id}}">{{$movie->name}}</option>
                                     @endforeach

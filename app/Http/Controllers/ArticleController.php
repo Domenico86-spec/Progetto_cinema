@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controllers\Middleware;
@@ -98,4 +99,6 @@ class ArticleController extends Controller implements HasMiddleware
     {
         //
     }
+
+    
 }

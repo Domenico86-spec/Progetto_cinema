@@ -17,6 +17,10 @@
                 <div class="text-center">
                     <a href="{{route('homepage')}}" class="btn btn-primary">Torna alla lista</a>
                 </div>
+                <div class="card-footer d-flex justify-content-between align items-center">
+                                    <a href="{{route('article.show')}}" class="btn btn-primary">Leggi</a>
+
+                                </div>
             </div>
 
         </div>

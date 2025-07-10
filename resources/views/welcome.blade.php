@@ -1,4 +1,14 @@
 <x-layout>
+
+    <div class="row justify-content-center">
+        @if (session('alert'))
+        <div class="alert alert-success">
+            {{ session('alert') }}
+
+        </div>
+        @endif
+
+    </div>
     <div class="container ">
         <div class="row justify-content-center mt-5">
             <div class="col-12 text-center">

@@ -13,7 +13,10 @@ Route::get('/article/show', [ArticleController::class, 'show'])->name('article.s
 
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::patch('/admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
 });
+
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
 
 
 

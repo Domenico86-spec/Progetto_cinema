@@ -61,7 +61,7 @@ class ArticleController extends Controller implements HasMiddleware
     {
         return [
 
-            new Middleware ('auth', except: ['index']),
+            new Middleware ('auth', except: ['index', 'articleSearch']),
         ];
         
     }
@@ -98,6 +98,12 @@ class ArticleController extends Controller implements HasMiddleware
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function articleSearch(Request $request){
+        $query = $request->input('query');
+        $articles = Article::search($query)->where('is_accepted', 'true')->orderBy('created_at', 'desc')->get();
+        return view('article.search-index', compact('articles', 'query'));
     }
 
     
